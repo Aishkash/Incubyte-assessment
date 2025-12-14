@@ -59,8 +59,8 @@ export const purchaseSweet = async (req: Request, res: Response) => {
 
 export const restockSweet = async (req: Request, res: Response) => {
     try {
-        const { amount } = req.body;
-        const sweet = await sweetService.restockSweet(req.params.id, amount);
+        const { quantity } = req.body;
+        const sweet = await sweetService.restockSweet(req.params.id, quantity);
         res.json(sweet);
     } 
     catch (error: any) {
