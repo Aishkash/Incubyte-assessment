@@ -14,4 +14,9 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api", sweetRoutes); 
 
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok" });
+});
+
+
 export default app;
