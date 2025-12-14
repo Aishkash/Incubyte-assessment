@@ -20,9 +20,10 @@ model User {
 model Sweet {
   id        String   @id @default(uuid())
   name      String
+  category  String
   price     Float
   quantity  Int
-  imageUrl  String?   
+  imageUrl  String?
   createdAt DateTime @default(now())
 }
 
