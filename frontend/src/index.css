@@ -1,0 +1,40 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6; /* Slightly increased line height for readability */
+  font-weight: 400;
+
+  /* Global Colors based on the palette */
+  color: #850E35; /* Berry Red for default text */
+  background-color: #FCF5EE; /* Pale Background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start; /* Aligns content to the top */
+  min-width: 320px;
+  min-height: 100vh;
+  /* Centering the App within body for proper container alignment */
+  justify-content: center;
+}
+
+/* Removed unneeded styles from the original index.css as they are now in App.css */
+h1 {
+  /* Let App.css handle specific headings */
+  line-height: 1.1;
+}
+
+a {
+  font-weight: 500;
+  color: #EE6983; /* Deep Pink for links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #850E35; /* Berry Red on hover */
+}
