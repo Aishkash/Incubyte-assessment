@@ -1,8 +1,8 @@
 import prisma from "../../config/prisma";
 
-export const createSweet = async (name: string, category: string, price: number, quantity: number) => {
+export const createSweet = async (name: string, category: string, price: number, quantity: number, imageUrl: string) => {
     return prisma.sweet.create({
-        data: { name, category, price, quantity }
+        data: { name, category, price, quantity, imageUrl }
     });
 };
 

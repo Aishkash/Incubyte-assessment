@@ -3,7 +3,7 @@ import * as sweetService from "./sweets.service";
 
 export const createSweet = async (req: Request, res: Response) => {
     try {
-        const sweet = await sweetService.createSweet(req.body.name, req.body.category, req.body.price, req.body.quantity);
+        const sweet = await sweetService.createSweet(req.body.name, req.body.category, req.body.price, req.body.quantity,req.body.imageUrl);
         res.status(201).json(sweet);
     } 
     catch (error: any) {
