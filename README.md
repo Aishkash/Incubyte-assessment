@@ -151,8 +151,8 @@ The project was developed using **React (Vite)** for the frontend and **Node.js 
 
 - **Tool Used:** ChatGPT
 - **Usage:**  
-  - Generated boilerplate for frontend components (`Login.jsx`, `Register.jsx`, `AdminDashboard.jsx`, `HomePage.jsx`) and backend controllers/services.  
-  - Assisted in implementing frontend functionality such as cart management, checkout logic, search integration, and animations.  
-  - Helped with CSS styling and layout adjustments to create a responsive UI.
+  - **Frontend:** Generated boilerplate for components (`Login.jsx`, `Register.jsx`, `AdminDashboard.jsx`, `HomePage.jsx`) and assisted in implementing functionality such as cart management, checkout logic, search integration, and animations. Helped with CSS styling and layout adjustments to create a responsive UI.  
+  - **Backend:** Generated initial boilerplate for controllers and services, implemented API endpoints (`/auth/register`, `/auth/login`, `/sweets`, `/sweets/search`, `/sweets/:id`), and assisted in writing test cases for all backend routes to ensure proper functionality and TDD workflow.
 - **Reflection:**  
-  Using ChatGPT accelerated development by reducing boilerplate code writing and providing suggestions for component structure and API integration. Manual refinements ensured a polished, production-ready application.
+  Using ChatGPT accelerated development by reducing boilerplate code writing, providing suggestions for component and service structures, and helping with test design. Manual refinements ensured a polished, production-ready application with full frontend-backend integration.
+
