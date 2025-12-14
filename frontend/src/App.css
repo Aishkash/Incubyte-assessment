@@ -1,0 +1,686 @@
+/* Custom Properties for easy color management */
+:root {
+  --color-pale-bg: #FCF5EE;
+  --color-soft-pink: #FFC4C4;
+  --color-deep-pink: #EE6983;
+  --color-berry-red: #850E35;
+  --color-text-light: #fefefe;
+  --color-hover-shadow: rgba(133, 14, 53, 0.4); 
+}
+
+/* Base App Container & Centering (Fixing width) */
+.app {
+  width: 100%;
+  max-width: 1080px; 
+  padding: 40px 20px; 
+  margin: 0 auto; 
+  min-height: 100vh;
+}
+
+/* --- Shared Button Styles --- */
+.btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.primary-btn {
+  background-color: var(--color-deep-pink);
+  color: var(--color-text-light);
+  border-color: var(--color-deep-pink);
+}
+
+.primary-btn:hover {
+  background-color: var(--color-berry-red);
+  border-color: var(--color-berry-red);
+  transform: translateY(-2px); 
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--color-berry-red);
+  border-color: var(--color-berry-red);
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-berry-red);
+  color: var(--color-text-light);
+  transform: scale(1.05); 
+}
+
+/* --- HEADER --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-soft-pink);
+  margin-bottom: 50px;
+}
+
+.animated-logo-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; 
+}
+
+.animated-logo-container:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.logo-text {
+  font-size: 2.6em; /* Adjusted size */
+  font-weight: 700;
+  color: var(--color-berry-red);
+  margin: 0 15px 0 10px; 
+}
+
+/* Top Right Actions (Cart and Login Group) */
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Tighter gap for adjacent buttons */
+}
+.neighborhood-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Adjust margin to create space between animation and heading */
+  margin-bottom: 20px; 
+}
+
+/* Base style for icon buttons */
+.cart-button, .login-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 3px; /* Minimal padding */
+  margin: 0; /* Ensures no extra spacing */
+  background: none;
+  min-width: unset;
+  border: none;
+  cursor: pointer;
+  color: var(--color-berry-red);
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.cart-button .icon,
+.login-button .icon {
+  font-size: 2rem;
+  margin-bottom: 2px;
+}
+
+.cart-button .text,
+.login-button .text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.cart-button:hover, .login-button:hover {
+  color: var(--color-deep-pink);
+  transform: translateY(-2px);
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  text-align: center;
+  padding: 100px 0; /* Increased vertical space */
+  background-color: var(--color-soft-pink);
+  border-radius: 15px;
+  margin-bottom: 80px; /* Increased separation from the list */
+  color: var(--color-berry-red);
+}
+
+.hero-content h2 {
+  font-size: 3.5em; 
+  margin-bottom: 10px;
+}
+
+/* Search Box Styling */
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search-box input {
+  padding: 12px 20px;
+  width: 80%; 
+  max-width: 650px; 
+  border-radius: 25px;
+  border: 2px solid var(--color-deep-pink);
+  font-size: 1.1em;
+  outline: none;
+  background-color: var(--color-text-light);
+  transition: all 0.3s;
+}
+
+.search-box input:focus {
+  border-color: var(--color-berry-red);
+  box-shadow: 0 0 10px var(--color-soft-pink);
+}
+
+
+/* --- SWEETS LIST --- */
+.sweets-list-section h3 {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 40px;
+  color: var(--color-deep-pink);
+}
+
+.sweets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.sweet-card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: var(--color-text-light);
+  color: var(--color-berry-red);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; 
+}
+
+/* Animation: Card Lift and Shadow */
+.sweet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px var(--color-hover-shadow);
+}
+
+/* Image Placeholder Styling */
+.sweet-image-placeholder {
+    /* Set fixed height to show more image */
+    height: 220px; 
+    width: auto;
+    background-color: var(--color-soft-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -25px -25px 20px -25px; /* Pull to edges of card */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+}
+
+.sweet-image-placeholder img {
+    /* Use max width/height to fit large images without cropping */
+    max-width: 100%;
+    max-height: 100%;
+    /* 'contain' ensures the whole image is visible, preventing cropping/stretching */
+    object-fit: contain; 
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Animation: Image Zoom on Card Hover */
+.sweet-card:hover .sweet-image-placeholder img {
+    /* Slight zoom on hover */
+    transform: scale(1.05); 
+}
+
+.sweet-name {
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: var(--color-deep-pink);
+}
+
+.sweet-price, .sweet-stock {
+  margin-bottom: 8px;
+}
+
+.sweet-stock span {
+  font-weight: 700;
+}
+
+.out-of-stock {
+  color: var(--color-deep-pink);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Card Actions for Two Buttons */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card-action-btn {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 0.9em;
+}
+
+.card-action-btn.add-to-cart {
+    background-color: var(--color-soft-pink);
+    color: var(--color-berry-red);
+    border-color: var(--color-soft-pink);
+}
+
+.card-action-btn.add-to-cart:hover {
+    background-color: var(--color-deep-pink);
+    color: var(--color-text-light);
+    border-color: var(--color-deep-pink);
+    transform: translateY(-2px);
+}
+
+
+.card-action-btn:disabled {
+  background: var(--color-soft-pink);
+  color: var(--color-berry-red);
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none; 
+}
+
+/* View More Section */
+.view-more {
+    text-align: center;
+    margin-top: 40px;
+}
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 8px 15px;
+  background-color: var(--color-soft-pink);
+  color: var(--color-berry-red);
+  border: 1px solid var(--color-deep-pink);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 0.9em;
+}
+
+.category-btn:hover {
+  background-color: var(--color-deep-pink);
+  color: var(--color-text-light);
+  transform: scale(1.03);
+}
+
+.category-btn.active-category {
+  background-color: var(--color-deep-pink);
+  color: var(--color-text-light);
+  font-weight: 700;
+}
+
+/* --- CART CONTENT STYLES (NEW BLOCK) --- */
+
+.empty-cart-message {
+  text-align: center;
+  padding: 40px 10px;
+  font-style: italic;
+  color: var(--color-deep-pink);
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto 70px; /* Image, Details, Controls, Subtotal */
+  gap: 10px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px dashed var(--color-soft-pink);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+.cart-item-image {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: var(--color-text-light);
+  padding: 5px;
+}
+
+.cart-item-details h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.1em;
+  color: var(--color-berry-red);
+}
+
+.cart-item-details p {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--color-deep-pink);
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty-btn {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 1px solid var(--color-soft-pink);
+  background-color: var(--color-text-light);
+  color: var(--color-berry-red);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  font-weight: 700;
+}
+
+.qty-btn:hover {
+  background-color: var(--color-soft-pink);
+}
+
+.qty-count {
+  font-weight: 600;
+}
+
+.cart-item-subtotal {
+  font-weight: 700;
+  font-size: 1.1em;
+  text-align: right;
+  margin: 0;
+}
+
+.cart-summary {
+  padding-top: 20px;
+  border-top: 2px solid var(--color-deep-pink);
+  text-align: right;
+}
+
+.cart-summary h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.5em;
+  color: var(--color-berry-red);
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+/* --- SIDEBAR / DRAWER STYLES --- */
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1000; 
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-drawer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px; 
+    max-width: 90%;
+    height: 100%;
+    background-color: var(--color-pale-bg); 
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+
+    transform: translateX(0); 
+    transition: transform 0.4s ease-out;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-soft-pink);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: var(--color-berry-red);
+    font-size: 1.8em;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--color-deep-pink);
+    transition: color 0.2s, transform 0.2s;
+    padding: 0;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--color-berry-red);
+    transform: rotate(90deg); 
+}
+
+.sidebar-content {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Sample Cart Item Styling */
+.sample-cart-item {
+    padding: 15px;
+    border: 1px dashed var(--color-soft-pink);
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+/* --- New Auth Page Styles --- */
+
+.auth-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-soft-pink);
+}
+
+.auth-box {
+  background-color: var(--color-pale-bg);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  /* max-width: 600px; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-box h2 {
+  color: var(--color-berry-red);
+  margin-bottom: 20px;
+}
+
+.auth-box input {
+  padding: 12px;
+  border: 1px solid var(--color-soft-pink);
+  border-radius: 8px;
+  font-size: 1em;
+  outline-color: var(--color-deep-pink);
+}
+
+.auth-link, .auth-box button {
+  text-decoration: none;
+  display: block;
+  width: 90%;
+  text-align: center;
+}
+
+.auth-link.admin-btn {
+  background-color: var(--color-berry-red);
+  color: var(--color-text-light);
+}
+
+.auth-container.admin .auth-box {
+  border: 2px solid var(--color-berry-red);
+}
+
+.back-link {
+  margin-top: 10px;
+  color: var(--color-deep-pink);
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+/* --- Admin Dashboard Styles --- */
+
+.admin-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-deep-pink);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.admin-header h2 {
+  color: var(--color-berry-red);
+}
+
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.stock-card {
+  background: var(--color-text-light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--color-berry-red);
+}
+
+.admin-sweet-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  background-color: var(--color-soft-pink);
+  border-radius: 5px;
+}
+
+.stock-control {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--color-soft-pink);
+}
+
+.stock-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.stock-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid var(--color-soft-pink);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.update-btn {
+  width: 80px;
+  padding: 8px 10px;
+  font-size: 0.9em;
+}
+
+.update-btn.success {
+  background-color: #38a169; /* Green */
+  border-color: #38a169;
+}
+.update-btn.error {
+  background-color: #e53e3e; /* Red */
+  border-color: #e53e3e;
+}
+.update-btn.success:hover, .update-btn.error:hover {
+  filter: brightness(1.1);
+  transform: none;
+}
+
+.status-message {
+  margin-top: 10px;
+  font-weight: 600;
+}
+.status-message.error {
+  color: #e53e3e;
+}
+.status-message.success {
+  color: #38a169;
+}
+.error-message {
+  color: #e53e3e;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.admin-back {
+  margin-top: 40px !important;
+  display: block;
+}
+
+/* --- FOOTER --- */
+.footer {
+  margin-top: 80px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid var(--color-soft-pink);
+  color: var(--color-berry-red);
+  opacity: 0.8;
+}
+
+.footer a {
+  color: var(--color-deep-pink);
+  text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
